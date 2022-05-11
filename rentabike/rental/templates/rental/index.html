@@ -1,0 +1,16 @@
+{% extends "rental/base.html" %}
+
+{% block title %}Rent-a-bike{% endblock %}
+{% block content %}
+<h1>Rent-a-bike</h1>
+
+<h2>Witamy w sklepie, który rower Cię interesuje?:</h2>
+<ul>
+{% for bike in bikes %}
+    <li>
+    <a href="{% url 'rental:bike' bike.id %}">{{ bike }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

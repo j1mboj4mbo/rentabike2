@@ -1,0 +1,10 @@
+{% extends 'rental/base.html' %}
+{% block title %}{{ bike.name }}{% endblock %}
+{% block content %}
+
+<b>Typ roweru:</b><p>{{ bike.name }}</p>
+<b>Opis:</b>
+<p>{{ bike.description }}</p>
+<a href="{% url 'rental:reservation' %}">Jednodniowa rezerwacja</a>
+
+{% endblock %}
